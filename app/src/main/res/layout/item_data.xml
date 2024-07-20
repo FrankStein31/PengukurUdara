@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/kadar_co2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="CO2"
+            android:textSize="12sp"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/kelembapan"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/kelembapan"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Kelembapan"
+            android:textSize="12sp"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/skala"
+            app:layout_constraintStart_toEndOf="@+id/kadar_co2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/skala"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Skala"
+            android:textSize="12sp"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/suhu"
+            app:layout_constraintStart_toEndOf="@+id/kelembapan"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/suhu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Suhu"
+            android:textSize="12sp"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            app:layout_constraintEnd_toStartOf="@+id/waktu"
+            app:layout_constraintStart_toEndOf="@+id/skala"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/waktu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Waktu"
+            android:textSize="12sp"
+            android:textColor="@color/text_primary"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/suhu"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            android:background="@color/divider_color"
+            android:layout_marginTop="12dp"
+            app:layout_constraintTop_toBottomOf="@id/kadar_co2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/kadar_co2_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0 ppm"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="@id/kadar_co2"
+            app:layout_constraintEnd_toEndOf="@id/kadar_co2" />
+
+        <TextView
+            android:id="@+id/kelembapan_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0%"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="@id/kelembapan"
+            app:layout_constraintEnd_toEndOf="@id/kelembapan" />
+
+        <TextView
+            android:id="@+id/skala_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="@id/skala"
+            app:layout_constraintEnd_toEndOf="@id/skala" />
+
+        <TextView
+            android:id="@+id/suhu_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="0°C"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="@id/suhu"
+            app:layout_constraintEnd_toEndOf="@id/suhu" />
+
+        <TextView
+            android:id="@+id/waktu_value"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textSize="16sp"
+            android:textColor="@color/text_secondary"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            app:layout_constraintTop_toBottomOf="@id/divider"
+            app:layout_constraintStart_toStartOf="@id/waktu"
+            app:layout_constraintEnd_toEndOf="@id/waktu" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

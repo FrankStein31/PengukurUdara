@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_air_quality"
+        android:title="Air Quality"
+        android:icon="@drawable/ic_air_quality" />
+    <item
+        android:id="@+id/nav_temperature"
+        android:title="Temperature"
+        android:icon="@drawable/ic_temperature" />
+    <item
+        android:id="@+id/nav_data_table"
+        android:title="Data Table"
+        android:icon="@drawable/ic_data_table" />
+
+</menu>

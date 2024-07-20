@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_air_quality"
+    app:defaultNavHost="true">
+
+    <fragment
+        android:id="@+id/nav_air_quality"
+        android:name="com.polinema.ta_iot.AirQualityFragment"
+        android:label="Air Quality"
+        tools:layout="@layout/fragment_air_quality">
+        <action
+            android:id="@+id/action_nav_air_quality_to_settingLocationFragment"
+            app:destination="@id/settingLocationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_temperature"
+        android:name="com.polinema.ta_iot.TemperatureFragment"
+        android:label="Temperature"
+        tools:layout="@layout/fragment_temperature" />
+    <fragment
+        android:id="@+id/nav_data_table"
+        android:name="com.polinema.ta_iot.DataTableFragment"
+        android:label="Data Table"
+        tools:layout="@layout/fragment_data_table" />
+    <fragment
+        android:id="@+id/settingLocationFragment"
+        android:name="com.polinema.ta_iot.SettingLocationFragment"
+        android:label="Setting Lokasi"
+        tools:layout="@layout/fragment_setting_location">
+        <action
+            android:id="@+id/action_settingLocationFragment_to_nav_air_quality"
+            app:destination="@id/nav_air_quality" />
+    </fragment>
+
+</navigation>
